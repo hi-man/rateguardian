@@ -7,7 +7,7 @@
 # Requirements
 
 - php 7.3+
-- yac 2.0+
+- yac 2.0.3+
 
 # Installation
 
