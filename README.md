@@ -1,5 +1,7 @@
 # Rate Guardian
 
+[![Build Status](https://secure.travis-ci.org/hi-man/rateguardian.png)](https://travis-ci.org/hi-man/rateguardian)
+
 > keep your server calm down
 
 # Requirements

@@ -1,0 +1,24 @@
+language: php
+
+sudo: false
+
+php:
+  - 7.3
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+matrix:
+    fast_finish: true
+
+before_script:
+  - pecl channel-update pecl.php.net
+  - echo '' | pecl install -f yac-2.0.2
+  - echo "extension = yac.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - echo "yac.enable_cli = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - if [ "$deps" == "low" ]; then composer update --prefer-dist --prefer-lowest --prefer-stable; fi
+  - if [ "$deps" != "low" ]; then composer install --prefer-dist; fi
+
+script:
+  - composer test
