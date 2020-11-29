@@ -7,6 +7,12 @@
 - php 7.3+
 - yac 2.0+
 
+# Installation
+
+```
+composer require hi-man/rateguardian
+```
+
 # Usage
 
 ## step 1 : initialize guardian
